@@ -1,16 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500&display=swap');
 
 body {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Assistant", sans-serif;
   margin: 0;
-  background: #111;
+  background-color: #202020;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .fa-magnifying-glass {
-  color: white;
+  color: #dcddde;
 }
 
 .flex-center {
@@ -40,7 +52,7 @@ body {
 }
 
 #uv-register-sw {
-  color: white;
+  color: #dcddde;
   background: #555555;
   cursor: pointer;
   outline: none;
@@ -66,11 +78,13 @@ body {
 
 .logo-wrapper .text {
   font-size: 75px;
-  color: #fff;
+  color: #dcddde;
+  text-align: center;
 }
 
 .logo-wrapper h1 {
   color: white;
+  font-family: 'Trispace', sans-serif;
 }
 
 footer {
@@ -82,7 +96,7 @@ footer {
   margin-bottom: 20px;
 }
 
-footer > div {
+footer>div {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -94,7 +108,7 @@ footer a,
 footer span {
   margin: 0 15px;
   text-decoration: none;
-  color: #fff;
+  color: #dcddde;
   font-size: 15px;
 }
 
@@ -109,10 +123,11 @@ footer a:hover {
 .desc p {
   width: 560px;
   color: rgba(253, 253, 253, 0.514);
+  text-align: center;
 }
 
 #uv-address {
-  background: none;
+  background: #2b2b2b;
   font-family: inherit;
   padding: 0px 17px;
   height: 48px;
@@ -123,11 +138,12 @@ footer a:hover {
   width: 350px;
   margin-top: 5px;
   border-radius: 50px;
-  color: #fff;
+  color: #dcddde;
   transition: border-radius 0.1s;
 }
 
 #uv-address:focus {
+  background: #3c3c3c;
   border: 1px solid rgba(253, 253, 253, 0.514);
   border-radius: 6px;
 }
@@ -165,10 +181,75 @@ footer a:hover {
   cursor: pointer;
 }
 
-.credit input:checked + label::after {
+.credit input:checked+label::after {
   content: "hide license";
 }
 
-.credit input:checked ~ pre {
+.credit input:checked~pre {
   display: block;
+}
+
+.space {
+  background: transparent center / 200px 200px round;
+  border: #4b2bff ridge;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.stars1 {
+  animation: space 180s ease-in-out infinite;
+  animation-delay: -150s;
+  background-image:
+    radial-gradient(1px 1px at 25px 5px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(1px 1px at 50px 25px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(1px 1px at 125px 20px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(1.5px 1.5px at 50px 75px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(2px 2px at 15px 125px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(2.5px 2.5px at 110px 80px, white, rgba(255, 255, 255, 0));
+}
+
+.stars2 {
+  animation: space 240s ease-in-out infinite;
+  animation-delay: -120s;
+  background-image:
+    radial-gradient(1px 1px at 75px 125px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(1px 1px at 100px 75px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(1.5px 1.5px at 199px 100px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(2px 2px at 20px 50px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(2.5px 2.5px at 100px 5px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(2.5px 2.5px at 5px 5px, white, rgba(255, 255, 255, 0));
+}
+
+.stars3 {
+  animation: space 300s ease-in-out infinite;
+  animation-delay: -90s;
+  background-image:
+    radial-gradient(1px 1px at 10px 10px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(1px 1px at 150px 150px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(1.5px 1.5px at 60px 170px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(1.5px 1.5px at 175px 180px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(2px 2px at 195px 95px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(2.5px 2.5px at 95px 145px, white, rgba(255, 255, 255, 0));
+}
+
+@keyframes space {
+  40% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+
+  60% {
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
