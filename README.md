@@ -1,14 +1,10 @@
 <p align="center"><img src="https://raw.githubusercontent.com/titaniumnetwork-dev/Ultraviolet-Static/main/public/uv.png" height="200"></p>
 
-<h1 align="center">Ultraviolet-Static</h1>
+<h1 align="center">VioletGG2-Static</h1>
 
-Static files/assets used to spin up an Ultraviolet website.
+Ultraviolet-Static files modified for [VioletGG2](https://codeberg.org/MonkeyGG2/VioletGG2) proxy. Refer to [VioletGG2](https://codeberg.org/MonkeyGG2/VioletGG2) for installation.
 
-## Install in [Ultraviolet-App](https://github.com/titaniumnetwork-dev/Ultraviolet-App.git)
-
-See [Ultraviolet-App's Wiki](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Customizing-your-frontend).
-
-## Usage outside of Ultraviolet-App/Static hosting
+# Original Ultraviolet-Static README.md
 
 ### Ultraviolet scripts
 
